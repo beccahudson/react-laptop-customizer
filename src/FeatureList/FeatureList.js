@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import FeatureCategory from "../FeatureCategory/FeatureCategory";
+import FeatureCategory from '../FeatureCategory/FeatureCategory';
 
 export default function FeatureList(props) {
   const features = Object.keys(props.features).map((feature, idx) => (

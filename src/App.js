@@ -1,27 +1,28 @@
-import React, { Component } from "react";
-
-import FeatureList from "./FeatureList/FeatureList";
+import React, { Component } from 'react';
+import FeatureList from './FeatureList/FeatureList';
 import Cart from "./Cart/Cart";
 import Total from "./Total/Total";
 
-import "./App.css";
+import features from './features.json';
+
+import './App.css';
 
 class App extends Component {
   state = {
     selected: {
-      Processor: {
-        name: "17th Generation Intel Core HB (7 Core with donut spare)",
+      'Processor': {
+        name: '17th Generation Intel Core HB (7 Core with donut spare)',
         cost: 700,
       },
-      "Operating System": {
-        name: "Ubuntu Linux 16.04",
+      'Operating System': {
+        name: 'Ubuntu Linux 16.04',
         cost: 200,
       },
-      "Video Card": {
-        name: "Toyota Corolla 1.5v",
+      'Video Card': {
+        name: 'Toyota Corolla 1.5v',
         cost: 1150.98,
       },
-      Display: {
+      'Display': {
         name: '15.6" UHD (3840 x 2160) 60Hz Bright Lights and Knobs',
         cost: 1500,
       },
@@ -38,23 +39,23 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <header>
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          <form className="main__form">
+          <form className='main__form'>
             <h2>Customize your laptop</h2>
             <FeatureList
-              {...this.props}
+              features={features}
               {...this.state}
               updateFeature={this.updateFeature}
             />
           </form>
-          <section className="main__summary">
+          <section className='main__summary'>
             <h2>Your cart</h2>
-            <Cart {...this.props} {...this.state} />
-            <Total {...this.props} {...this.state} />
+              <Cart features={features} {...this.state}  />
+              <Total features={features} {...this.state} />          
           </section>
         </main>
       </div>

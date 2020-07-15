@@ -11,6 +11,7 @@ body {
   line-height: 1.875;
   color: #252525;
   margin: 0;
+  border: 3px solid blue;
 }
 
 header {
@@ -40,12 +41,16 @@ main {
 
 .main__form {
   flex: 4;
+  border: 3px solid red;
+}
+
+fieldset {
+  border: 3px solid #87df00;
 }
 
 .feature {
   padding: 0.8rem;
   padding-top: 0.4rem;
-  border: 0;
 }
 
 .feature + .feature {
@@ -56,6 +61,10 @@ main {
   font-size: inherit;
   line-height: inherit;
   font-weight: bold;
+}
+
+.feature__item {
+  border: 3px solid #00ffe7;
 }
 
 .feature__item + .feature__item {
@@ -101,6 +110,7 @@ while keeping them available to the keyboard */
 .main__summary {
   flex: 3;
   margin-left: 0.2rem;
+  border: 3px solid orange;
 }
 
 .summary__option {
@@ -110,6 +120,7 @@ while keeping them available to the keyboard */
     'value value';
   padding: 0.2rem;
   margin-top: 1rem;
+  border: 3px solid rebeccapurple;
 }
 
 .summary__option__label {
@@ -132,7 +143,7 @@ while keeping them available to the keyboard */
   line-height: 2.4;
   display: flex;
   margin-top: 1.5rem;
-  border-top: solid 1px #252525;
+  border: 3px solid hotpink;
 }
 
 .summary__total__label {
