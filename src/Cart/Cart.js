@@ -1,11 +1,15 @@
 import React from "react";
+import features from "../features.json";
+import Total from "../Total/Total";
 
-import CartItem from "../CartItem/CartItem";
+import CartItem from "../Summary/Summary";
 
 export default function Cart(props) {
-  const summary = Object.keys(props.selected).map((feature, idx) => (
-    <CartItem {...props} feature={feature} idx={idx} key={idx} />
-  ));
-
-  return summary;
-}
+  
+  return ( 
+    <>
+      <CartItem features = { features } {...props} />  
+      <Total features = { features } {...props} />
+    </>
+  );
+};
